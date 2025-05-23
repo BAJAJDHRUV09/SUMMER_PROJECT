@@ -10,7 +10,7 @@
 }
 ,
   "dependencies": {
-    "serve": "^15.0.1",
+    "serve": "^14.2.0",
     "@headlessui/react": "^1.7.18",
     "autoprefixer": "^10.4.17",
     "papaparse": "^5.4.1",
