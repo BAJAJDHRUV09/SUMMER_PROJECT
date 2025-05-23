@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: boundary-layer-viz
+    env: node
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_VERSION
+        value: 18.0.0 
