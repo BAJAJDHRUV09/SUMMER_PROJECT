@@ -3,7 +3,10 @@ services:
     name: boundary-layer-viz
     env: node
     buildCommand: npm install && npm run build
+    startCommand: npm start
     staticPublishPath: ./dist
     envVars:
       - key: NODE_VERSION
-        value: 18.0.0 
+        value: 18.0.0
+      - key: NODE_ENV
+        value: production 
