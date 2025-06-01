@@ -1,8 +1,9 @@
+/* Reset default styles */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left;
 }
 
 .logo {
@@ -39,4 +40,87 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/* Custom slider styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  outline: none;
+  transition: background 0.2s;
+}
+
+input[type="range"]:hover {
+  background: #d1d5db;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4F46E5;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.2);
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  background: #4338CA;
+  transform: scale(1.1);
+}
+
+/* Smooth transitions */
+svg path {
+  transition: d 0.3s ease-in-out;
+}
+
+/* Card hover effects */
+.hover-card {
+  transition: all 0.3s ease;
+}
+
+.hover-card:hover {
+  transform: translateY(-2px);
+}
+
+/* Active simulation indicator */
+.active-indicator {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(79, 70, 229, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(79, 70, 229, 0);
+  }
+}
+
+/* Container styling */
+.visualization-container {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .simulation-container {
+    flex-direction: column;
+  }
+  
+  .controls-panel {
+    width: 100%;
+  }
+  
+  .visualization-panel {
+    width: 100%;
+  }
 }
